@@ -29,7 +29,7 @@ const myFilterWidget = new FilterWidget('filterWidget', filterOptions, (filters)
 ```
 
 ## API
-# Constructor:
+### Constructor:
 ```
 new FilterWidget(containerId, options, callback)
 ```
@@ -39,7 +39,7 @@ options: Array of filter options
 callback: Function to be called when filters change
 
 
-#Methods
+### Methods
 render() - 
 bindEvents() - binds all events with addEventListener to other callback functions
 handleClick(e) - handles all the click events.
