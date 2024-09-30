@@ -33,42 +33,26 @@ const myFilterWidget = new FilterWidget('filterWidget', filterOptions, (filters)
 ```
 new FilterWidget(containerId, options, callback)
 ```
-
 - **containerId**: The ID of the HTML container element where the FilterWidget will be rendered.
-
 - **options**: An array of filter options, with each option defining:
   - `field`: The name of the filter field (e.g., "category", "status").
   - `label`: A user-friendly label for the filter.
   - `values`: An array of possible values for the filter.
-
 - **callback**: A function to be called whenever filters are updated. The current filter state is passed as an argument to this function.
 
+
 ### Methods
-
 - **render()**: Renders the list of filters in the widget interface.
-
 - **bindEvents()**: Binds all events using `addEventListener`, connecting them to the corresponding callback functions.
-
 - **handleClick(e)**: Handles all click events related to the filter interactions.
-
 - **handleKeypress(e)**: Handles changes in the search filter when users type into the search input.
-
 - **handleCategoryChange(e)**: Manages changes in the category selection when a user chooses a different category.
-
 - **handleValueChange(e)**: Enables or disables the 'Add' button based on the validity of the selected value.
-
 - **addSearchFilter()**: Adds the current search filter to the list of active filters.
-
 - **addFilter()**: Adds a category filter when a user selects both a category and a corresponding value.
-
 - **removeFilter(index)**: Removes a specific filter by its index, or clears all filters if no index is specified.
-
 - **clearAllFilters()**: Removes all active filters.
-
 - **updateFilterSummary()**: Updates the summary display to reflect the currently active filters.
-
 - **triggerCallback()**: Triggers the callback function and passes the updated filters to the parent application.
-
 - **get() & set()**: Provides external access to retrieve or set the current filters.
-
 - **destroy()**: Cleans up the widget by removing all event listeners and resetting the UI to its original state.
