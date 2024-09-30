@@ -1,0 +1,157 @@
+body {
+  background-color: #f0f2f5;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.filter-widget {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.filter-controls .input-group {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+
+.filter-controls .btn-outline-danger {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.form-control, .form-select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.filter-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.filter-item {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e9ecef;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13px;
+  color: #495057;
+}
+
+.filter-item .remove-filter {
+  cursor: pointer;
+  margin-left: 8px;
+  font-weight: bold;
+  color: #6c757d;
+  transition: color 0.15s ease-in-out;
+}
+
+.filter-item .remove-filter:hover {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+  }
+
+  .filter-controls .input-group,
+  .filter-controls .btn-outline-danger {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .filter-controls .btn-outline-danger {
+    margin-top: 10px;
+  }
+
+  .form-control,
+  .form-select,
+  .btn {
+    height: 40px; 
+    line-height: 40px; 
+    padding: 0 12px;
+  }
+
+  .input-group {
+    flex-wrap: nowrap; 
+  }
+
+  #searchInput,
+  #filterCategory,
+  #filterValue {
+    flex: 1 1 auto;  
+  }
+
+  #searchButton,
+  #addFilterButton {
+    flex: 0 0 auto;  
+    white-space: nowrap;  
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-widget {
+    padding: 15px;
+  }
+
+  .form-control, 
+  .form-select, 
+  .btn {
+    font-size: 16px; 
+  }
+}
